@@ -18,22 +18,28 @@ function calculator() {
     oper = document.querySelector("#operator").value;
     //assigning the operations
     if (oper === "add") {
-        document.querySelector("#results li:first-child").innerHTML = n1 + n2;
+        result = document.querySelector("#firstnumber").value = n1 + n2;
     }
     if (oper === "sub") {
-        document.querySelector("#results").innerHTML = n1 - n2;
+        result = document.querySelector("#firstnumber").value = n1 - n2;
     }
     if (oper === "mul") {
-        document.querySelector("#results").innerHTML = n1 * n2;
+        result = document.querySelector("#firstnumber").value = n1 * n2;
     }
     if (oper === "div") {
-        document.querySelector("#results").innerHTML = n1 / n2;
+        result = document.querySelector("#firstnumber").value = n1 / n2;
     }
+    roundResl();
     results();
 }
 
-function results() {
+function roundResl() {
+    console.log("i am working");
+    Math.round("result");
+}
 
+function results() {
+    document.querySelector("#results").innerHTML += result;
 }
 
 

@@ -29,13 +29,20 @@ function calculator() {
     if (oper === "div") {
         result = document.querySelector("#firstnumber").value = n1 / n2;
     }
-    roundResl();
-    results();
+    roundRes();
+
 }
 
-function roundResl() {
-    console.log("i am working");
-    Math.round("result");
+function roundRes() {
+    let dec = document.querySelector("#decimals").value;
+    let round = document.querySelector("#doround");
+    //console.log(round.checked);
+    //console.log(result);
+    //console.log(dec);
+    if (round.checked === true) {
+        result = result.toFixed(dec);
+    }
+    results();
 }
 
 function results() {

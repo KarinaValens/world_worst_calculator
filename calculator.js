@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 //window.addEventListener("load", start); //init calculator
 
 const calc = document.querySelector("#calculate");
@@ -7,6 +7,7 @@ let n1;
 let n2;
 let oper;
 let result;
+
 document.querySelector("#calculate").addEventListener("click", calculator);
 document.querySelector("#clear").addEventListener("click", clear);
 
@@ -39,6 +40,7 @@ function roundRes() {
 function results() {
     document.querySelector("#results li:last-child").innerHTML = result;
     //document.querySelector("#results").scroll(0, 1000); //this is intendet to print the result in the <li> but does not work
+    // take the result from the last child and disply in the sibling before that
 }
 
 function clear() {
@@ -49,8 +51,3 @@ function clear() {
     document.querySelector("#doround").checked = false;
     document.querySelector("html").offsetHeight;
 }
-
-
-
-
-

@@ -16,13 +16,13 @@ function calculator() {
     n2 = parseInt(document.querySelector("#secondnumber").value);
     oper = document.querySelector("#operator").value;
     if (oper === "add") { //assigning the operations
-        result = value = n1 + n2;
+        result = document.querySelector("#firstnumber").value = n1 + n2;
     } else if (oper === "sub") {
-        result = value = n1 - n2;
+        result = document.querySelector("#firstnumber").value = n1 - n2;
     } else if (oper === "mul") {
-        result = value = n1 * n2;
+        result = document.querySelector("#firstnumber").value = n1 * n2;
     } else if (oper === "div") {
-        result = value = n1 / n2;
+        result = document.querySelector("#firstnumber").value = n1 / n2;
     }
     roundRes();
 }
